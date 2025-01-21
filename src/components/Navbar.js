@@ -1,0 +1,103 @@
+import React, { useState } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
+
+function NavBar() {
+  const [expand, updateExpanded] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
+
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+
+  window.addEventListener("scroll", scrollHandler);
+
+  return (
+    <Navbar
+      expanded={expand}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
+    >
+      <Container>
+        {/* Sriranjan Srikanth branding on left top corner */}
+        <Navbar.Brand href="#home" className="d-flex">
+          Sriranjan Srikanth
+        </Navbar.Brand>
+
+        {/* Hamburger Menu */}
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => {
+            updateExpanded(expand ? false : "expanded");
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </Navbar.Toggle>
+
+        {/* Navbar collapse */}
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto" defaultActiveKey="#home">
+            {/* About section consists of brief description, skills and education */}
+            {/* <Nav.Item>
+                <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+                  About
+                </Nav.Link>
+              </Nav.Item> */}
+            <Nav.Item>
+              <Nav.Link href="#about" onClick={() => updateExpanded(false)}>
+                About
+              </Nav.Link>
+            </Nav.Item>
+
+            {/* Work consists of work experience and projects */}
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/about"
+                onClick={() => updateExpanded(false)}
+              >
+                {/* <AiOutlineUser style={{ marginBottom: "2px" }} />  */}
+                Work
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/project"
+                onClick={() => updateExpanded(false)}
+              >
+                {/* <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "} */}
+                Resume
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/resume"
+                onClick={() => updateExpanded(false)}
+              >
+                {/* <CgFileDocument style={{ marginBottom: "2px" }} />  */}
+                Contact
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
+export default NavBar;
