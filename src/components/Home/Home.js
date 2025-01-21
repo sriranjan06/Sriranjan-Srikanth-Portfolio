@@ -17,7 +17,7 @@ function Home() {
           {/* Particles Effect */}
           <Particle />
 
-          {/* Landing Page */}
+          {/* Container for Name and Profile Picture with tagline */}
           <Container className="home-content">
             <Row>
               {/* Left Column */}
@@ -67,15 +67,17 @@ function Home() {
                 />
               </Col>
             </Row>
+          </Container>
 
-            {/* About Me Description */}
-            <Row id="about" className="home-about-description">
+          {/* Container for About Me and Technical Skills */}
+          <Container id="about" className="about-section">
+            <Row>
               <>{/* Empty fragment to logically separate sections */}</>
-              <h1 style={{ fontSize: "2.6em" }}>
+              <h2 style={{ fontSize: "2.6em" }}>
                 ABOUT<span className="purple"> ME</span>
-              </h1>
-              <Col md={6}>
-                <p className="home-about-body">
+              </h2>
+              <Col md={6} className="home-about-body">
+                <p>
                   I'm dedicated to building{" "}
                   <b className="purple">
                     innovative full-stack web applications
@@ -92,8 +94,8 @@ function Home() {
                 </p>
               </Col>
 
-              <Col md={6}>
-                <p className="home-about-body">
+              <Col md={6} className="home-about-body">
+                <p>
                   My work is driven by a commitment to continuous improvement
                   and a strong focus on{" "}
                   <b className="purple">cloud technologies</b>,
@@ -109,11 +111,39 @@ function Home() {
             </Row>
 
             {/* Skills */}
-            <Row className="home-about-description">
+            <Row>
+              <>{/* Empty fragment to logically separate sections */}</>
+              <h2
+                style={{
+                  fontSize: "2.6em",
+                  paddingTop: "50px",
+                  paddingBottom: "20px",
+                }}
+              >
+                TECHNICAL<span className="purple"> SKILLS </span>
+              </h2>
               <Col md={12}>
-                <h2 style={{ fontSize: "2.6em", paddingBottom: "20px" }}>
-                  TECHNICAL<span className="purple"> SKILLS </span>
-                </h2>
+                <div
+                  style={{
+                    textAlign: "left",
+                    lineHeight: "1.8",
+                    fontSize: "1.2em",
+                  }}
+                >
+                  <p>
+                    <b>Languages:</b> JavaScript, TypeScript, Java, Python, SQL,
+                    HTML, CSS, C, C++
+                  </p>
+                  <p>
+                    <b>Libraries and Frameworks:</b> React.js, Redux, Next.js,
+                    Tailwind CSS, Spring, Spring Boot, Express.js, Node.js
+                  </p>
+                  <p>
+                    <b>Databases and Technologies:</b> MySQL, MongoDB,
+                    PostgreSQL, Neo4j, Amazon Web Services (AWS), Kubernetes,
+                    Docker, Kafka, Firebase
+                  </p>
+                </div>
                 <p align="center">
                   <img
                     height="50"
@@ -304,40 +334,88 @@ function Home() {
               </Col>
             </Row>
           </Container>
-        </Container>
 
-        {/* Contact */}
-        <Container>
-          <Row>
-            <Col md={12} className="home-about-social">
-              <h1>FIND ME ON</h1>
-              <p>
-                Feel free to <span className="purple">connect </span>with me
-              </p>
-              <ul className="home-about-social-links">
-                <li className="social-icons">
-                  {/* <a
+          {/* Container for Work */}
+          <Container id="work" className="work-experience-section">
+            <h2 className="section-header">
+              <span className="purple">WORK </span>EXPERIENCE
+            </h2>
+
+            <Row className="work-experience">
+              {/* Experience 1 */}
+              <Col md={4} className="experience-card">
+                <h3>Software Development Engineer</h3>
+                <h4 className="company">Brillio</h4>
+                <p className="duration">Sept 2022 - July 2023</p>
+                <p>
+                  Improved system performance and data retrieval efficiency by
+                  implementing optimized solutions using <b>React.js</b>,{" "}
+                  <b>Spring Boot</b>, and <b>MySQL</b>. Conducted thorough{" "}
+                  <b>UI and API testing</b> to enhance product reliability.
+                </p>
+              </Col>
+
+              {/* Experience 2 */}
+              <Col md={4} className="experience-card">
+                <h3>Software Development Intern</h3>
+                <h4 className="company">Dokat, Inc.</h4>
+                <p className="duration">Aug 2020 - Oct 2020</p>
+                <p>
+                  Improved website performance and conducted QA testing for{" "}
+                  <b>Lisa.ai</b>, utilizing <b>React.js</b>, <b>Express.js</b>,{" "}
+                  <b>Node.js</b>, and <b>MongoDB</b>. Delivered enhancements
+                  that significantly improved user experience.
+                </p>
+              </Col>
+
+              {/* Experience 3 */}
+              <Col md={4} className="experience-card">
+                <h3>Survey Assistant</h3>
+                <h4 className="company">ASU Office of Evaluation</h4>
+                <p className="duration">Sept 2024 - Present</p>
+                <p>
+                  Managed the GAS, UGAS, FDS, and FYSS surveys. Assisted with{" "}
+                  <b>data processing</b> and <b>evaluation analytics</b>,
+                  ensuring data accuracy and compliance with university
+                  standards.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+
+          {/* Contact */}
+          <Container>
+            <Row>
+              <Col md={12} className="home-about-social">
+                <h1>FIND ME ON</h1>
+                <p>
+                  Feel free to <span className="purple">connect </span>with me
+                </p>
+                <ul className="home-about-social-links">
+                  <li className="social-icons">
+                    {/* <a
                       href=""
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour home-social-icons"
                     > */}
-                  <AiFillGithub />
-                  {/* </a> */}
-                </li>
-                <li className="social-icons">
-                  {/* <a
+                    <AiFillGithub />
+                    {/* </a> */}
+                  </li>
+                  <li className="social-icons">
+                    {/* <a
                       href=""
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour home-social-icons"
                     > */}
-                  <FaLinkedinIn />
-                  {/* </a> */}
-                </li>
-              </ul>
-            </Col>
-          </Row>
+                    <FaLinkedinIn />
+                    {/* </a> */}
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+          </Container>
         </Container>
       </section>
     </>

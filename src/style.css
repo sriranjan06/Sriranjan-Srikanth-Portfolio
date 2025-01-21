@@ -253,7 +253,7 @@ body.scroll-active ::-webkit-scrollbar {
 }
 
 .home-about-body {
-  padding-top: 50px;
+  padding-top: 30px;
   font-size: 1.2em !important;
   text-align: left;
 }
@@ -318,6 +318,59 @@ body.scroll-active ::-webkit-scrollbar {
 
 .icon-colour {
   color: #700c86 !important;
+}
+
+/* Work Experience Styles */
+.work-experience-section {
+  background-color: var(--section-background-color);
+  padding: 70px 20px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.section-header {
+  font-size: 2.6em;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.work-experience {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: left;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.company {
+  font-size: 1.2em;
+  color: var(--imp-text-color);
+}
+
+.duration {
+  font-style: italic;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.experience-card p {
+  line-height: 1.6;
+  font-size: 1.1em;
 }
 
 /* --------- */
@@ -466,9 +519,8 @@ body.scroll-active ::-webkit-scrollbar {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  padding-top: 70px !important;
+  padding-bottom: 20px !important;
   color: white !important;
 }
 

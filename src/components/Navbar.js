@@ -46,12 +46,6 @@ function NavBar() {
         {/* Navbar collapse */}
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
-            {/* About section consists of brief description, skills and education */}
-            {/* <Nav.Item>
-                <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                  About
-                </Nav.Link>
-              </Nav.Item> */}
             <Nav.Item>
               <Nav.Link href="#about" onClick={() => updateExpanded(false)}>
                 About
@@ -60,12 +54,7 @@ function NavBar() {
 
             {/* Work consists of work experience and projects */}
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                {/* <AiOutlineUser style={{ marginBottom: "2px" }} />  */}
+              <Nav.Link href="#work" onClick={() => updateExpanded(false)}>
                 Work
               </Nav.Link>
             </Nav.Item>
