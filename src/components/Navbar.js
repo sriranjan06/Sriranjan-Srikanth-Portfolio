@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -61,24 +60,17 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/project"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => updateExpanded(false)}
               >
-                {/* <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "} */}
                 Resume
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
-              >
-                {/* <CgFileDocument style={{ marginBottom: "2px" }} />  */}
+              <Nav.Link href="#contact" onClick={() => updateExpanded(false)}>
                 Contact
               </Nav.Link>
             </Nav.Item>

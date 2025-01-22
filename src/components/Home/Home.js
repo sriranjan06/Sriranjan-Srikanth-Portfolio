@@ -9,14 +9,68 @@ import profilePic from "../../Assets/profilepicture.jpeg";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
+const projects = [
+  {
+    title: "Streamline Orchestrator",
+    description:
+      "Streamline Orchestrator is a containerized pipeline using Docker, Kubernetes, and Kafka for scalable, fault-tolerant real-time data streaming and Neo4j-based graph analytics, enabling efficient document stream processing for insights.",
+    image: "/Assets/Projects/StreamlineOrchestrator.png",
+    link: "https://github.com/sriranjan06/Streamline-Orchestrator",
+  },
+  {
+    title: "Serenity Homes",
+    description:
+      "Serenity Homes is a full-stack web app for managing property listings, built with React, Vite, Tailwind CSS, and MongoDB. It features secure authentication with JWT and Google OAuth, Firebase-powered image uploads, responsive design, advanced search, and intuitive listing management.",
+    image: "/Assets/Projects/SerenityHomes.jpg",
+    link: "https://github.com/sriranjan06/Serenity-Homes",
+  },
+  {
+    title: "Connectify",
+    description:
+      "Connectify is a full-stack social media app with a responsive Next.js and Tailwind CSS frontend, powered by a robust Spring Boot and MySQL backend. It features Google authentication, dynamic posts, and efficient state management with Redux Toolkit.",
+    image: "/Assets/Projects/Connectify.jpg",
+    link: "https://github.com/sriranjan06/Connectify-Social-Media-App",
+  },
+  {
+    title: "Project 4",
+    description: "Description for Project 4",
+    image: "path-to-image4.svg",
+    link: "https://github.com/project4",
+  },
+  {
+    title: "Project 5",
+    description: "Description for Project 5",
+    image: "path-to-image5.svg",
+    link: "https://github.com/project5",
+  },
+  {
+    title: "Project 6",
+    description: "Description for Project 6",
+    image: "path-to-image6.svg",
+    link: "https://github.com/project6",
+  },
+  {
+    title: "Project 7",
+    description: "Description for Project 7",
+    image: "path-to-image7.svg",
+    link: "https://github.com/project7",
+  },
+  {
+    title: "Project 8",
+    description: "Description for Project 8",
+    image: "path-to-image8.svg",
+    link: "https://github.com/project8",
+  },
+];
+
 function Home() {
   return (
     <>
       <section id="home">
+        {/* Entire Body Container */}
         <Container fluid className="home-section">
           {/* Particles Effect */}
           <Particle />
-
           {/* Container for Name and Profile Picture with tagline */}
           <Container className="home-content">
             <Row>
@@ -68,354 +122,443 @@ function Home() {
               </Col>
             </Row>
           </Container>
+        </Container>
+      </section>
 
-          {/* Container for About Me and Technical Skills */}
-          <Container id="about" className="about-section">
-            <Row>
-              <>{/* Empty fragment to logically separate sections */}</>
-              <h2 style={{ fontSize: "2.6em" }}>
-                ABOUT<span className="purple"> ME</span>
-              </h2>
-              <Col md={6} className="home-about-body">
-                <p>
-                  I'm dedicated to building{" "}
-                  <b className="purple">
-                    innovative full-stack web applications
-                  </b>{" "}
-                  and <b className="purple">scalable systems </b>
-                  that solve complex, real-world challenges.
-                  <br />
-                  <br />
-                  With experience as a Software Development Engineer and
-                  contributions to impactful projects, I specialize in designing
-                  robust solutions that seamlessly integrate{" "}
-                  <b className="purple">front-end interfaces</b> with efficient
-                  <b className="purple"> back-end systems</b>.
-                </p>
-              </Col>
+      {/* Container for About Me and Technical Skills */}
+      <section id="about">
+        <Container className="about-section">
+          <Row>
+            <>{/* Empty fragment to logically separate sections */}</>
+            <h2 style={{ fontSize: "2.6em" }}>
+              ABOUT<span className="purple"> ME</span>
+            </h2>
+            <Col md={6} className="home-about-body">
+              <p>
+                I'm dedicated to building{" "}
+                <b className="purple">innovative full-stack web applications</b>{" "}
+                and <b className="purple">scalable systems </b>
+                that solve complex, real-world challenges.
+                <br />
+                <br />
+                With experience as a Software Development Engineer and
+                contributions to impactful projects, I specialize in designing
+                robust solutions that seamlessly integrate{" "}
+                <b className="purple">front-end interfaces</b> with efficient
+                <b className="purple"> back-end systems</b>.
+              </p>
+            </Col>
 
-              <Col md={6} className="home-about-body">
-                <p>
-                  My work is driven by a commitment to continuous improvement
-                  and a strong focus on{" "}
-                  <b className="purple">cloud technologies</b>,
-                  <b className="purple"> automation</b>, and{" "}
-                  <b className="purple">scalable architecture</b>.
-                  <br />
-                  <br />
-                  My goal is to leverage my skills to deliver transformative
-                  solutions, collaborate on innovative projects, and make a
-                  meaningful impact through technology.
-                </p>
-              </Col>
-            </Row>
+            <Col md={6} className="home-about-body">
+              <p>
+                My work is driven by a commitment to continuous improvement and
+                a strong focus on <b className="purple">cloud technologies</b>,
+                <b className="purple"> automation</b>, and{" "}
+                <b className="purple">scalable architecture</b>.
+                <br />
+                <br />
+                My goal is to leverage my skills to deliver transformative
+                solutions, collaborate on innovative projects, and make a
+                meaningful impact through technology.
+              </p>
+            </Col>
+          </Row>
 
-            {/* Skills */}
-            <Row>
-              <>{/* Empty fragment to logically separate sections */}</>
-              <h2
+          {/* Skills */}
+          <Row>
+            <>{/* Empty fragment to logically separate sections */}</>
+            <h2
+              style={{
+                fontSize: "2.6em",
+                paddingTop: "50px",
+                paddingBottom: "20px",
+              }}
+            >
+              TECHNICAL<span className="purple"> SKILLS </span>
+            </h2>
+            <Col md={12}>
+              <div
                 style={{
-                  fontSize: "2.6em",
-                  paddingTop: "50px",
-                  paddingBottom: "20px",
+                  textAlign: "left",
+                  lineHeight: "1.8",
+                  fontSize: "1.2em",
                 }}
               >
-                TECHNICAL<span className="purple"> SKILLS </span>
-              </h2>
-              <Col md={12}>
-                <div
-                  style={{
-                    textAlign: "left",
-                    lineHeight: "1.8",
-                    fontSize: "1.2em",
-                  }}
-                >
-                  <p>
-                    <b>Languages:</b> JavaScript, TypeScript, Java, Python, SQL,
-                    HTML, CSS, C, C++
-                  </p>
-                  <p>
-                    <b>Libraries and Frameworks:</b> React.js, Redux, Next.js,
-                    Tailwind CSS, Spring, Spring Boot, Express.js, Node.js
-                  </p>
-                  <p>
-                    <b>Databases and Technologies:</b> MySQL, MongoDB,
-                    PostgreSQL, Neo4j, Amazon Web Services (AWS), Kubernetes,
-                    Docker, Kafka, Firebase
-                  </p>
-                </div>
-                <p align="center">
-                  <img
-                    height="50"
-                    src="/Assets/Icons/javascript.svg"
-                    alt="JavaScript"
-                    title="JavaScript"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/typescript-icon.svg"
-                    alt="TypeScript"
-                    title="TypeScript"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/java.svg"
-                    alt="Java"
-                    title="Java"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/python.svg"
-                    alt="Python"
-                    title="Python"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/mysql.svg"
-                    alt="MySQL"
-                    title="MySQL"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/postgresql.svg"
-                    alt="PostgreSQL"
-                    title="PostgreSQL"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/HTML5_logo_resized.svg"
-                    alt="HTML5"
-                    title="HTML5"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/CSS3_logo_and_wordmark.svg"
-                    alt="CSS3"
-                    title="CSS3"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/c.svg"
-                    alt="C"
-                    title="C"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/file-type-cpp2.svg"
-                    alt="C++"
-                    title="C++"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/file-type-reactjs.svg"
-                    alt="React.js"
-                    title="React.js"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/redux-logo-svgrepo-com.svg"
-                    alt="Redux"
-                    title="Redux"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/nextjs.svg"
-                    alt="Next.js"
-                    title="Next.js"
-                    style={{ filter: "invert(1)" }}
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/Tailwind_CSS_Logo.svg"
-                    alt="Tailwind CSS"
-                    title="Tailwind CSS"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/springio-ar21.svg"
-                    alt="Spring Boot"
-                    title="Spring Boot"
-                  />
-                  &nbsp;
-                  <img
-                    height="40"
-                    src="/Assets/Icons/express.svg"
-                    alt="Express.js"
-                    title="Express.js"
-                    style={{ filter: "invert(1)" }}
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/nodejs-icon.svg"
-                    alt="Node.js"
-                    title="Node.js"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/file-type-mongo.svg"
-                    alt="MongoDB"
-                    title="MongoDB"
-                  />
-                  &nbsp;
-                  <img
-                    height="45"
-                    src="/Assets/Icons/neo4j-icon.svg"
-                    alt="Neo4j"
-                    title="Neo4j"
-                  />
-                  &nbsp;
-                  <img
-                    height="45"
-                    src="/Assets/Icons/Amazon_Web_Services_Logo.svg"
-                    alt="AWS"
-                    title="AWS"
-                    style={{ filter: "invert(1)" }}
-                  />
-                  &nbsp;
-                  <img
-                    height="45"
-                    src="/Assets/Icons/kubernetes-icon.svg"
-                    alt="Kubernetes"
-                    title="Kubernetes"
-                  />
-                  &nbsp;
-                  <img
-                    height="45"
-                    src="/Assets/Icons/docker-svgrepo-com.svg"
-                    alt="Docker"
-                    title="Docker"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/kafka.svg"
-                    alt="Kafka"
-                    title="Kafka"
-                    style={{ filter: "invert(1)" }}
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/firebase.svg"
-                    alt="Firebase"
-                    title="Firebase"
-                  />
-                  &nbsp;
-                  <img
-                    height="45"
-                    src="/Assets/Icons/npm.svg"
-                    alt="NPM"
-                    title="NPM"
-                  />
-                  &nbsp;
-                  <img
-                    height="50"
-                    src="/Assets/Icons/git-icon.svg"
-                    alt="Git"
-                    title="Git"
-                  />
+                <p>
+                  <b>Languages:</b> JavaScript, TypeScript, Java, Python, SQL,
+                  HTML, CSS, C, C++
                 </p>
-              </Col>
-            </Row>
-          </Container>
+                <p>
+                  <b>Libraries and Frameworks:</b> React.js, Redux, Next.js,
+                  Tailwind CSS, Spring, Spring Boot, Express.js, Node.js
+                </p>
+                <p>
+                  <b>Databases and Technologies:</b> MySQL, MongoDB, PostgreSQL,
+                  Neo4j, Amazon Web Services (AWS), Kubernetes, Docker, Kafka,
+                  Firebase
+                </p>
+              </div>
+              <p align="center">
+                <img
+                  height="50"
+                  src="/Assets/Icons/javascript.svg"
+                  alt="JavaScript"
+                  title="JavaScript"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/typescript-icon.svg"
+                  alt="TypeScript"
+                  title="TypeScript"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/java.svg"
+                  alt="Java"
+                  title="Java"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/python.svg"
+                  alt="Python"
+                  title="Python"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/mysql.svg"
+                  alt="MySQL"
+                  title="MySQL"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/postgresql.svg"
+                  alt="PostgreSQL"
+                  title="PostgreSQL"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/HTML5_logo_resized.svg"
+                  alt="HTML5"
+                  title="HTML5"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/CSS3_logo_and_wordmark.svg"
+                  alt="CSS3"
+                  title="CSS3"
+                />
+                &nbsp;
+                <img height="50" src="/Assets/Icons/c.svg" alt="C" title="C" />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/file-type-cpp2.svg"
+                  alt="C++"
+                  title="C++"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/file-type-reactjs.svg"
+                  alt="React.js"
+                  title="React.js"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/redux-logo-svgrepo-com.svg"
+                  alt="Redux"
+                  title="Redux"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/nextjs.svg"
+                  alt="Next.js"
+                  title="Next.js"
+                  style={{ filter: "invert(1)" }}
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/Tailwind_CSS_Logo.svg"
+                  alt="Tailwind CSS"
+                  title="Tailwind CSS"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/springio-ar21.svg"
+                  alt="Spring Boot"
+                  title="Spring Boot"
+                />
+                &nbsp;
+                <img
+                  height="40"
+                  src="/Assets/Icons/express.svg"
+                  alt="Express.js"
+                  title="Express.js"
+                  style={{ filter: "invert(1)" }}
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/nodejs-icon.svg"
+                  alt="Node.js"
+                  title="Node.js"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/file-type-mongo.svg"
+                  alt="MongoDB"
+                  title="MongoDB"
+                />
+                &nbsp;
+                <img
+                  height="45"
+                  src="/Assets/Icons/neo4j-icon.svg"
+                  alt="Neo4j"
+                  title="Neo4j"
+                />
+                &nbsp;
+                <img
+                  height="45"
+                  src="/Assets/Icons/Amazon_Web_Services_Logo.svg"
+                  alt="AWS"
+                  title="AWS"
+                  style={{ filter: "invert(1)" }}
+                />
+                &nbsp;
+                <img
+                  height="45"
+                  src="/Assets/Icons/kubernetes-icon.svg"
+                  alt="Kubernetes"
+                  title="Kubernetes"
+                />
+                &nbsp;
+                <img
+                  height="45"
+                  src="/Assets/Icons/docker-svgrepo-com.svg"
+                  alt="Docker"
+                  title="Docker"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/kafka.svg"
+                  alt="Kafka"
+                  title="Kafka"
+                  style={{ filter: "invert(1)" }}
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/firebase.svg"
+                  alt="Firebase"
+                  title="Firebase"
+                />
+                &nbsp;
+                <img
+                  height="45"
+                  src="/Assets/Icons/npm.svg"
+                  alt="NPM"
+                  title="NPM"
+                />
+                &nbsp;
+                <img
+                  height="50"
+                  src="/Assets/Icons/git-icon.svg"
+                  alt="Git"
+                  title="Git"
+                />
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
-          {/* Container for Work */}
-          <Container id="work" className="work-experience-section">
-            <h2 className="section-header">
-              <span className="purple">WORK </span>EXPERIENCE
-            </h2>
-
-            <Row className="work-experience">
-              {/* Experience 1 */}
-              <Col md={4} className="experience-card">
+      {/* Container for Work */}
+      <section id="work" className="work-experience-section">
+        <Container>
+          <h2 className="section-header">
+            <span className="purple">WORK </span>EXPERIENCE
+          </h2>
+          <div className="timeline">
+            {/* Node 1 */}
+            <div className="timeline-item">
+              <div className="timeline-icon"></div>
+              <div className="timeline-content">
                 <h3>Software Development Engineer</h3>
                 <h4 className="company">Brillio</h4>
-                <p className="duration">Sept 2022 - July 2023</p>
+                <p className="duration">September 2022 - July 2023</p>
                 <p>
-                  Improved system performance and data retrieval efficiency by
-                  implementing optimized solutions using <b>React.js</b>,{" "}
-                  <b>Spring Boot</b>, and <b>MySQL</b>. Conducted thorough{" "}
-                  <b>UI and API testing</b> to enhance product reliability.
+                  Designed and maintained applications to enhance data retrieval
+                  and uptime while improving user experience with optimized
+                  interfaces and validation workflows. Conducted API testing to
+                  boost system responsiveness, utilizing <b>React.js</b>,{" "}
+                  <b>Spring Boot</b>, and <b>MySQL</b> for scalable solutions.
                 </p>
-              </Col>
+              </div>
+            </div>
 
-              {/* Experience 2 */}
-              <Col md={4} className="experience-card">
-                <h3>Software Development Intern</h3>
-                <h4 className="company">Dokat, Inc.</h4>
-                <p className="duration">Aug 2020 - Oct 2020</p>
+            {/* Node 2 */}
+            <div className="timeline-item">
+              <div className="timeline-icon"></div>
+              <div className="timeline-content">
+                <h3>Research Intern</h3>
+                <h4 className="company">
+                  International Institute of Information Technology Bangalore
+                </h4>
+                <p className="duration">June 2021 - August 2021</p>
                 <p>
-                  Improved website performance and conducted QA testing for{" "}
-                  <b>Lisa.ai</b>, utilizing <b>React.js</b>, <b>Express.js</b>,{" "}
-                  <b>Node.js</b>, and <b>MongoDB</b>. Delivered enhancements
-                  that significantly improved user experience.
+                  Optimized Bangalore neighborhood layouts with SUMO and
+                  OpenStreetMap to improve traffic flow and reduce delays. Used
+                  <b>XML</b> and <b>Python</b> to analyze traffic conditions and
+                  enhance simulation accuracy, producing research-driven graphs
+                  for better urban planning.
                 </p>
-              </Col>
+              </div>
+            </div>
 
-              {/* Experience 3 */}
-              <Col md={4} className="experience-card">
-                <h3>Survey Assistant</h3>
-                <h4 className="company">ASU Office of Evaluation</h4>
-                <p className="duration">Sept 2024 - Present</p>
+            {/* Node 3 */}
+            <div className="timeline-item">
+              <div className="timeline-icon"></div>
+              <div className="timeline-content">
+                <h3>Software Engineer Intern</h3>
+                <h4 className="company">Dokat Inc</h4>
+                <p className="duration">August 2020 - October 2020</p>
                 <p>
-                  Managed the GAS, UGAS, FDS, and FYSS surveys. Assisted with{" "}
-                  <b>data processing</b> and <b>evaluation analytics</b>,
-                  ensuring data accuracy and compliance with university
-                  standards.
+                  Improved website performance with <b>React</b>, boosting load
+                  speeds and user satisfaction. Conducted QA testing for Lisa.ai
+                  to ensure functionality and resolve critical bugs, enhancing
+                  reliability and user experience. Supported backend development
+                  with <b>Express.js</b>, <b>Node.js</b>, and optimized database
+                  interactions using <b>MongoDB</b>.
                 </p>
-              </Col>
-            </Row>
-          </Container>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-          {/* Contact */}
-          <Container>
-            <Row>
-              <Col md={12} className="home-about-social">
-                <h1>FIND ME ON</h1>
-                <p>
-                  Feel free to <span className="purple">connect </span>with me
-                </p>
-                <ul className="home-about-social-links">
-                  <li className="social-icons">
-                    {/* <a
+      {/* Projects Section */}
+      <section id="projects" className="projects-section">
+        <Container>
+          <h2 className="section-header">
+            <span className="purple">PROJECTS</span>
+          </h2>
+          <Row className="project-row">
+            {/* Row 1 */}
+            {projects.slice(0, 4).map((project, index) => (
+              <Col key={index} md={3} className="project-card">
+                <div className="project-card-inner">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                  />
+                  <div className="project-details">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-title-link"
+                    >
+                      <h3 className="project-title">{project.title}</h3>
+                    </a>
+                    <p className="project-description">{project.description}</p>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+          <Row className="project-row">
+            {/* Row 2 */}
+            {projects.slice(4).map((project, index) => (
+              <Col key={index} md={3} className="project-card">
+                <div className="project-card-inner">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image"
+                  />
+                  <div className="project-details">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-title-link"
+                    >
+                      <h3 className="project-title">{project.title}</h3>
+                    </a>
+                    <p className="project-description">{project.description}</p>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+          <div className="more-links">
+            <a
+              href="https://github.com/yourgithubusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              <i className="fab fa-github"></i> Check out more of my work
+            </a>
+            <a
+              href="https://drive.google.com/your-resume-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-link"
+            >
+              View My Resume
+            </a>
+          </div>
+        </Container>
+      </section>
+
+      {/* Contact */}
+      <section id="contact">
+        <Container>
+          <Row>
+            <Col md={12} className="home-about-social">
+              <h1>FIND ME ON</h1>
+              <p>
+                Feel free to <span className="purple">connect </span>with me
+              </p>
+              <ul className="home-about-social-links">
+                <li className="social-icons">
+                  {/* <a
                       href=""
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour home-social-icons"
                     > */}
-                    <AiFillGithub />
-                    {/* </a> */}
-                  </li>
-                  <li className="social-icons">
-                    {/* <a
+                  <AiFillGithub />
+                  {/* </a> */}
+                </li>
+                <li className="social-icons">
+                  {/* <a
                       href=""
                       target="_blank"
                       rel="noreferrer"
                       className="icon-colour home-social-icons"
                     > */}
-                    <FaLinkedinIn />
-                    {/* </a> */}
-                  </li>
-                </ul>
-              </Col>
-            </Row>
-          </Container>
+                  <FaLinkedinIn />
+                  {/* </a> */}
+                </li>
+              </ul>
+            </Col>
+          </Row>
         </Container>
       </section>
     </>
