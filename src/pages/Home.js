@@ -1,9 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
-import Type from "./Type";
-import profilePic from "../../Assets/profilepicture.jpeg";
-// import Tilt from "react-parallax-tilt";
+import Particle from "../components/animations/Particle";
+import Type from "../components/animations/Type";
+import profilePic from "../assets/profilepicture.jpeg";
 
 // Social Media Icons
 import { AiFillGithub } from "react-icons/ai";
