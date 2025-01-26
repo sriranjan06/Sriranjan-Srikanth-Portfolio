@@ -2,11 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../components/animations/Particle";
 import Type from "../components/animations/Type";
-import profilePic from "../assets/profilepicture.jpeg";
+import profilePic from "../assets/images/profilepicture.jpeg";
 
 // Social Media Icons
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 
 const projects = [
   {
@@ -31,28 +32,32 @@ const projects = [
     link: "https://github.com/sriranjan06/Connectify-Social-Media-App",
   },
   {
-    title: "Project 4",
-    description: "Description for Project 4",
-    image: "path-to-image4.svg",
-    link: "https://github.com/project4",
+    title: "Account Administration System",
+    description:
+      "A full stack web application with admin authentication implementation using Next.js, Spring Boot, MySQL, TailwindCSS, Headless UI, NextAuth.js, Spring Data JPA, Web and Test.",
+    image: "/Assets/Projects/Account-Admin.jpg",
+    link: "https://github.com/sriranjan06/Account-Administration-System",
   },
   {
-    title: "Project 5",
-    description: "Description for Project 5",
-    image: "path-to-image5.svg",
-    link: "https://github.com/project5",
+    title: "Employee Management Service",
+    description:
+      "An employee management system built with React.js, Spring Boot, MySQL, and Tailwind CSS, simplifying employee record management with a user-friendly interface, robust backend, and reliable database support.",
+    image: "/Assets/Projects/Employee-Management.jpg",
+    link: "https://github.com/sriranjan06/Employee-Management-Service",
   },
   {
-    title: "Project 6",
-    description: "Description for Project 6",
-    image: "path-to-image6.svg",
-    link: "https://github.com/project6",
+    title: "Malaria Diagnosis using Deep Learning",
+    description:
+      "This project uses machine learning models, including SVM, KNN, ANN, and CNN, to classify blood cell images as infected or uninfected with malaria, featuring detailed preprocessing and performance evaluation.",
+    image: "/Assets/Projects/Malaria-Diagnosis.png",
+    link: "https://github.com/sriranjan06/Diagnosis-of-Infectious-Diseases-using-Machine-Learning-Models",
   },
   {
-    title: "Project 7",
-    description: "Description for Project 7",
+    title: "Global Renewable Energy Trends",
+    description:
+      "This project analyzes global renewable energy trends, focusing on solar, wind, and hydroelectric sources. It identifies growth patterns, regional disparities, and the impact of renewable energy on GDP. Visualizations highlight the challenges and opportunities in global renewable energy adoption.",
     image: "path-to-image7.svg",
-    link: "https://github.com/project7",
+    link: "https://github.com/sriranjan06/Global-Renewable-Energy-Trends",
   },
   {
     title: "Project 8",
@@ -526,34 +531,55 @@ function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact">
+      <section id="contact" className="contact-section">
         <Container>
+          {/* Header */}
           <Row>
-            <Col md={12} className="home-about-social">
-              <h1>FIND ME ON</h1>
+            <Col md={12} className="contact-header">
+              <h1>
+                <span className="purple">CONTACT</span> ME
+              </h1>
               <p>
-                Feel free to <span className="purple">connect </span>with me
+                I'm currently open for exciting opportunities! Let’s{" "}
+                <span className="purple">connect</span> and talk about the next
+                big thing!
               </p>
+            </Col>
+          </Row>
+
+          {/* Social Icons */}
+          <Row>
+            <Col md={12} className="social-links">
               <ul className="home-about-social-links">
                 <li className="social-icons">
-                  {/* <a
-                      href=""
-                      target="_blank"
-                      rel="noreferrer"
-                      className="icon-colour home-social-icons"
-                    > */}
-                  <AiFillGithub />
-                  {/* </a> */}
+                  <a
+                    href="mailto:ssrika21@asu.edu"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <AiOutlineMail /> {/* Email Icon */}
+                  </a>
                 </li>
                 <li className="social-icons">
-                  {/* <a
-                      href=""
-                      target="_blank"
-                      rel="noreferrer"
-                      className="icon-colour home-social-icons"
-                    > */}
-                  <FaLinkedinIn />
-                  {/* </a> */}
+                  <a
+                    href="https://www.linkedin.com/in/sriranjan-s/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <FaLinkedinIn /> {/* LinkedIn Icon */}
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://github.com/sriranjan06"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="icon-colour home-social-icons"
+                  >
+                    <AiFillGithub /> {/* GitHub Icon */}
+                  </a>
                 </li>
               </ul>
             </Col>
