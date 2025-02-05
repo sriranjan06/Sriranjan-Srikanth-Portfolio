@@ -55,73 +55,54 @@ const projects = [
   {
     title: "Global Renewable Energy Trends",
     description:
-      "This project analyzes global renewable energy trends, focusing on solar, wind, and hydroelectric sources. It identifies growth patterns, regional disparities, and the impact of renewable energy on GDP. Visualizations highlight the challenges and opportunities in global renewable energy adoption.",
-    image: "path-to-image7.svg",
+      "This project examines global renewable energy trends, focusing on solar, wind, and hydroelectric sources. It explores growth patterns, regional disparities, and their impact on GDP, using visualizations to highlight challenges and opportunities in adoption.",
+    image: "/Assets/Projects/GlobalEnergy.jpg",
     link: "https://github.com/sriranjan06/Global-Renewable-Energy-Trends",
   },
   {
-    title: "Project 8",
-    description: "Description for Project 8",
-    image: "path-to-image8.svg",
-    link: "https://github.com/project8",
+    title: "Targeted Enrollment Analytics",
+    description:
+      "This project leverages U.S. Census data to identify demographic and socioeconomic factors influencing income levels, aiming to enhance university enrollment. Through data visualizations, it uncovers insights to develop targeted marketing profiles for individuals earning $50,000 or less annually.",
+    image: "/Assets/Projects/TargetedEnrollment.jpg",
+    link: "https://github.com/sriranjan06/Targeted-Enrollment-Analytics",
   },
 ];
 
 function Home() {
   return (
     <>
-      <section id="home">
-        {/* Entire Body Container */}
-        <Container fluid className="home-section">
-          {/* Particles Effect */}
+      {/* Introduction */}
+      <section id="introduction" className="intro-section">
+        <Container>
           <Particle />
-          {/* Container for Name and Profile Picture with tagline */}
-          <Container className="home-content">
+
+          {/* Introduction Content */}
+          <Container className="intro-content">
             <Row>
               {/* Left Column */}
-              <Col md={6} className="home-header">
+              <Col md={6} className="intro-header">
                 <h4 style={{ paddingBottom: 15 }} className="heading">
                   Hi there! I am
                 </h4>
-
                 <h2 style={{ paddingBottom: 5 }} className="heading-name">
                   <strong className="main-name">Sriranjan Srikanth</strong>
                 </h2>
-
-                <h5
-                  style={{
-                    paddingTop: "15px", // Adds spacing above
-                    fontStyle: "italic", // Makes the text italic
-                    color: "white", // Text color (currently white, can be your accent color)
-                    fontSize: "1.2rem", // Adjusts font size
-                    fontWeight: "500", // Medium font weight
-                    paddingLeft: "50px", // Corrected camelCase for padding left
-                  }}
-                >
+                <h5 className="intro-subtext">
                   and I am passionate about creating impactful software.
                 </h5>
 
                 {/* Typewriter Effect */}
-                <div style={{ padding: 50, textAlign: "left" }}>
+                <div className="typewriter-container">
                   <Type />
                 </div>
               </Col>
 
               {/* Profile Picture */}
-              <Col
-                md={6}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  paddingBottom: 20,
-                }}
-              >
+              <Col md={6} className="profile-picture-container">
                 <img
                   src={profilePic}
-                  alt=" "
-                  className="img-fluid"
-                  style={{ maxHeight: "400px", borderRadius: "50%" }}
+                  alt="Profile"
+                  className="profile-picture"
                 />
               </Col>
             </Row>
@@ -129,38 +110,45 @@ function Home() {
         </Container>
       </section>
 
-      {/* Container for About Me and Technical Skills */}
-      <section id="about">
-        <Container className="about-section">
-          <Row>
-            <>{/* Empty fragment to logically separate sections */}</>
-            <h2 style={{ fontSize: "2.6em" }}>
-              ABOUT<span className="purple"> ME</span>
-            </h2>
-            <Col md={6} className="home-about-body">
+      {/* About | Technical Skills */}
+      <section id="about" className="about-section">
+        <Container>
+          <h2 className="section-header">
+            ABOUT<span className="purple"> ME</span>
+          </h2>
+
+          {/* About Me Content */}
+          <Row className="about-content justify-content-center">
+            <Col md={5} className="about-text">
               <p>
                 I'm dedicated to building{" "}
                 <b className="purple">innovative full-stack web applications</b>{" "}
-                and <b className="purple">scalable systems </b>
-                that solve complex, real-world challenges.
-                <br />
-                <br />
-                With experience as a Software Development Engineer and
-                contributions to impactful projects, I specialize in designing
-                robust solutions that seamlessly integrate{" "}
-                <b className="purple">front-end interfaces</b> with efficient
-                <b className="purple"> back-end systems</b>.
+                and <b className="purple">scalable systems</b> that solve
+                complex, real-world challenges.
               </p>
             </Col>
 
-            <Col md={6} className="home-about-body">
+            <Col md={5} className="about-text">
+              <p>
+                With experience as a Software Development Engineer and
+                contributions to impactful projects, I specialize in designing
+                robust solutions that seamlessly integrate{" "}
+                <b className="purple">front-end interfaces</b> with efficient{" "}
+                <b className="purple">back-end systems</b>.
+              </p>
+            </Col>
+
+            <Col md={5} className="about-text">
               <p>
                 My work is driven by a commitment to continuous improvement and
-                a strong focus on <b className="purple">cloud technologies</b>,
-                <b className="purple"> automation</b>, and{" "}
+                a strong focus on <b className="purple">cloud technologies</b>,{" "}
+                <b className="purple">automation</b>, and{" "}
                 <b className="purple">scalable architecture</b>.
-                <br />
-                <br />
+              </p>
+            </Col>
+
+            <Col md={5} className="about-text">
+              <p>
                 My goal is to leverage my skills to deliver transformative
                 solutions, collaborate on innovative projects, and make a
                 meaningful impact through technology.
@@ -168,26 +156,14 @@ function Home() {
             </Col>
           </Row>
 
-          {/* Skills */}
-          <Row>
-            <>{/* Empty fragment to logically separate sections */}</>
-            <h2
-              style={{
-                fontSize: "2.6em",
-                paddingTop: "50px",
-                paddingBottom: "20px",
-              }}
-            >
-              TECHNICAL<span className="purple"> SKILLS </span>
-            </h2>
+          {/* Technical Skills Section */}
+          <h2 className="section-header">
+            TECHNICAL<span className="purple"> SKILLS</span>
+          </h2>
+
+          <Row className="skills-content">
             <Col md={12}>
-              <div
-                style={{
-                  textAlign: "left",
-                  lineHeight: "1.8",
-                  fontSize: "1.2em",
-                }}
-              >
+              <div className="skills-list">
                 <p>
                   <b>Languages:</b> JavaScript, TypeScript, Java, Python, SQL,
                   HTML, CSS, C, C++
@@ -202,7 +178,9 @@ function Home() {
                   Firebase
                 </p>
               </div>
-              <p align="center">
+
+              {/* Tech Icons */}
+              <div align="center">
                 <img
                   height="50"
                   src="/Assets/Icons/javascript.svg"
@@ -383,13 +361,13 @@ function Home() {
                   alt="Git"
                   title="Git"
                 />
-              </p>
+              </div>
             </Col>
           </Row>
         </Container>
       </section>
 
-      {/* Container for Work */}
+      {/* Work */}
       <section id="work" className="work-experience-section">
         <Container>
           <h2 className="section-header">
@@ -453,7 +431,7 @@ function Home() {
         </Container>
       </section>
 
-      {/* Projects Section */}
+      {/* Projects */}
       <section id="projects" className="projects-section">
         <Container>
           <h2 className="section-header">
@@ -509,28 +487,33 @@ function Home() {
               </Col>
             ))}
           </Row>
-          <div className="more-links">
-            <a
-              href="https://github.com/yourgithubusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              <i className="fab fa-github"></i> Check out more of my work
-            </a>
-            <a
-              href="https://drive.google.com/your-resume-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="resume-link"
-            >
-              View My Resume
-            </a>
+          <div className="more-links d-flex flex-column align-items-center text-center">
+            <div>
+              <a
+                href="https://github.com/sriranjan06"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="github-link"
+              >
+                <i className="fab fa-github"></i> Check out more of my work on
+                GitHub
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://drive.google.com/your-resume-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="resume-link"
+              >
+                View My Resume
+              </a>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Contact */}
+      {/* Contact Me */}
       <section id="contact" className="contact-section">
         <Container>
           {/* Header */}

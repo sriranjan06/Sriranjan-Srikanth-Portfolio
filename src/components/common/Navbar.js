@@ -26,7 +26,7 @@ function NavBar() {
     >
       <Container>
         {/* Sriranjan Srikanth branding on left top corner */}
-        <Navbar.Brand href="#home" className="d-flex">
+        <Navbar.Brand href="#introduction" className="d-flex">
           Sriranjan Srikanth
         </Navbar.Brand>
 
