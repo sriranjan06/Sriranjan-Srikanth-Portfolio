@@ -78,13 +78,11 @@ function Home() {
 
           {/* Introduction Content */}
           <Container className="intro-content">
-            <Row>
-              {/* Left Column */}
-              <Col md={6} className="intro-header">
-                <h4 style={{ paddingBottom: 15 }} className="heading">
-                  Hi there! I am
-                </h4>
-                <h2 style={{ paddingBottom: 5 }} className="heading-name">
+            <Row className="d-flex align-items-center justify-content-center flex-column flex-md-row">
+              {/* LEFT COLUMN - Text */}
+              <Col md={6} className="intro-header text-center text-md-start">
+                <h4 className="heading">Hi there! I am</h4>
+                <h2 className="heading-name">
                   <strong className="main-name">Sriranjan Srikanth</strong>
                 </h2>
                 <h5 className="intro-subtext">
@@ -97,7 +95,7 @@ function Home() {
                 </div>
               </Col>
 
-              {/* Profile Picture */}
+              {/* RIGHT COLUMN - Profile Picture */}
               <Col md={6} className="profile-picture-container">
                 <img
                   src={profilePic}
