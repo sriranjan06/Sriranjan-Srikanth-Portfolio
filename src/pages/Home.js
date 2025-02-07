@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../components/animations/Particle";
 import Type from "../components/animations/Type";
-import profilePic from "../assets/images/profilepicture.jpeg";
+import profilePic from "../Assets/images/profilepicture.jpeg";
 
 // Social Media Icons
 import { AiFillGithub } from "react-icons/ai";
