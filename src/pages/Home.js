@@ -22,7 +22,7 @@ const projects = [
     description:
       "Serenity Homes is a full-stack web app for managing property listings, built with React, Vite, Tailwind CSS, and MongoDB. It features secure authentication with JWT and Google OAuth, Firebase-powered image uploads, responsive design, advanced search, and intuitive listing management.",
     image: "/Assets/Projects/SerenityHomes.jpg",
-    link: "https://github.com/sriranjan06/Serenity-Homes",
+    link: "https://serenity-homes.onrender.com/",
   },
   {
     title: "Connectify",
