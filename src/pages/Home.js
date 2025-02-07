@@ -171,9 +171,9 @@ function Home() {
                   Tailwind CSS, Spring, Spring Boot, Express.js, Node.js
                 </p>
                 <p>
-                  <b>Databases and Technologies:</b> MySQL, MongoDB, PostgreSQL,
-                  Neo4j, Amazon Web Services (AWS), Kubernetes, Docker, Kafka,
-                  Firebase
+                  <b>Databases and Technologies:</b> MySQL, PostgreSQL, MongoDB,
+                  Kafka, Firebase, Amazon Web Services (AWS), Git, Docker,
+                  Kubernetes
                 </p>
               </div>
 
@@ -400,7 +400,7 @@ function Home() {
                 <p className="duration">June 2021 - August 2021</p>
                 <p>
                   Optimized Bangalore neighborhood layouts with SUMO and
-                  OpenStreetMap to improve traffic flow and reduce delays. Used
+                  OpenStreetMap to improve traffic flow and reduce delays. Used{" "}
                   <b>XML</b> and <b>Python</b> to analyze traffic conditions and
                   enhance simulation accuracy, producing research-driven graphs
                   for better urban planning.
@@ -499,7 +499,7 @@ function Home() {
             </div>
             <div>
               <a
-                href="https://drive.google.com/your-resume-link"
+                href="https://drive.google.com/file/d/180idmU71Ab8v6HudWs8QJwg5QGyXbLvT/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="resume-link"
@@ -520,7 +520,7 @@ function Home() {
               <h1>
                 <span className="purple">CONTACT</span> ME
               </h1>
-              <p>
+              <p style={{ color: "whitesmoke" }}>
                 I'm currently open for exciting opportunities! Let’s{" "}
                 <span className="purple">connect</span> and talk about the next
                 big thing!
