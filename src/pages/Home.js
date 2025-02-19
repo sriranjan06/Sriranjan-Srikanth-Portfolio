@@ -499,7 +499,7 @@ function Home() {
             </div>
             <div>
               <a
-                href="https://drive.google.com/file/d/180idmU71Ab8v6HudWs8QJwg5QGyXbLvT/view"
+                href="https://drive.google.com/file/d/1rWABvLa1a7Ud2Y9YBj7eDDRtLLLs7e69/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="resume-link"
