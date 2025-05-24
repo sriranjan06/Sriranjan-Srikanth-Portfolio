@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Footer from "./components/common/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/common/ScrollToTop";
-import "./styles/style.css";
+import "./styles/global.css";
 import "./styles/App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 

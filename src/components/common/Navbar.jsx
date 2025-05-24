@@ -21,8 +21,8 @@ function NavBar() {
     <Navbar
       expanded={expand}
       fixed="top"
-      expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      expand="lg"
+      className={navColour || expand === "expanded" ? "sticky" : "navbar"}
     >
       <Container>
         {/* Sriranjan Srikanth branding on left top corner */}
@@ -51,7 +51,13 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* Work consists of work experience and projects */}
+            <Nav.Item>
+              <Nav.Link href="#skills" onClick={() => updateExpanded(false)}>
+                Skills
+              </Nav.Link>
+            </Nav.Item>
+
+            {/* Work consists of work experience */}
             <Nav.Item>
               <Nav.Link href="#work" onClick={() => updateExpanded(false)}>
                 Work
@@ -59,8 +65,14 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
+              <Nav.Link href="#projects" onClick={() => updateExpanded(false)}>
+                Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
               <Nav.Link
-                href="https://drive.google.com/file/d/1rWABvLa1a7Ud2Y9YBj7eDDRtLLLs7e69/view?usp=sharing"
+                href="https://drive.google.com/file/d/1psGmdPCjDlxHN3C-EyK0JTL1dNULBgpu/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => updateExpanded(false)}

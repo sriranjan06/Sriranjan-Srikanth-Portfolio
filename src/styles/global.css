@@ -12,6 +12,8 @@ html {
   );
 
   --imp-text-color: #fcc200;
+
+  /* scroll-padding-top: 20px; Adjust based on your navbar height */
 }
 
 .purple {
@@ -45,7 +47,7 @@ a:not(.home-social-icons) {
   height: 100%;
   z-index: 999999;
   background-color: black;
-  background-image: url(../Assets/svg/bouncing-circles.svg);
+  background-image: url(../assets/svg/bouncing-circles.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100px 100px;
@@ -198,21 +200,22 @@ body.scroll-active ::-webkit-scrollbar {
   font-size: 2.6em;
   margin-bottom: 20px;
   text-align: center;
+  color: white !important; /* <- Add this line */
 }
 
 /* Home section */
-#tsparticles {
+/* #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
   height: 100%;
-}
+} */
 
 /* =============== INTRODUCTION SECTION =============== */
 .intro-section {
   background-color: var(--section-background-color);
-  padding: 70px 20px 30px; /* Reduced bottom padding */
+  padding: 70px 20px 20px; /* Reduced bottom padding */
   color: whitesmoke;
   text-align: center;
   height: 70vh; /* Slightly reduced height */
@@ -234,6 +237,37 @@ body.scroll-active ::-webkit-scrollbar {
   text-align: left;
 }
 
+/* This controls horizontal positioning */
+/* Prevent the text from overflowing and pushing */
+.intro-text-wrapper {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Responsive adjustment for mid-sized screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .intro-section {
+    padding-left: 40px;
+    padding-right: 40px;
+    min-height: 80vh;
+  }
+
+  .intro-text-wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .profile-picture {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .heading {
   color: white;
   font-size: 1.5em;
@@ -241,7 +275,7 @@ body.scroll-active ::-webkit-scrollbar {
 
 .heading-name {
   color: whitesmoke;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -275,13 +309,21 @@ body.scroll-active ::-webkit-scrollbar {
   color: #9f840e !important;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .typewriter-container {
+    text-align: center !important;
+  }
+}
+
 /* PROFILE PICTURE */
 .profile-picture-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 70px;
   padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .profile-picture {
@@ -292,6 +334,39 @@ body.scroll-active ::-webkit-scrollbar {
   object-fit: cover; /* Ensures no distortion */
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .profile-picture {
+    max-width: 80vw;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+  }
+
+  .profile-picture-container {
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-section {
+    padding-bottom: 0 !important; /* Reduce bottom space */
+  }
+
+  .intro-content {
+    padding-bottom: 0 !important;
+  }
+
+  .profile-picture-container {
+    padding-bottom: 10px !important; /* Already present, keep minimal */
+  }
+
+  .about-section {
+    padding-top: 70px !important; /* Reduce top padding for About Me */
+  }
+}
 /* =============== RESPONSIVE DESIGN (MOBILE OPTIMIZATION) =============== */
 @media (max-width: 767px) {
   .intro-section {
@@ -349,7 +424,7 @@ body.scroll-active ::-webkit-scrollbar {
 /* =============== ABOUT ME & TECHNICAL SKILLS =============== */
 .about-section {
   background-color: var(--section-background-color);
-  padding: 40px 20px 70px; /* Reduced top padding */
+  padding: 70px 20px 20px; /* Reduced top padding */
   color: whitesmoke;
 }
 
@@ -360,13 +435,37 @@ body.scroll-active ::-webkit-scrollbar {
 .skills-list p {
   font-size: 1.2em;
   margin-bottom: 10px;
+  color: white !important;
+}
+
+.skills-section {
+  background-color: var(--section-background-color);
+  padding: 70px 20px 20px; /* Top | Left/Right | Bottom */
+  color: whitesmoke;
+}
+
+@media (max-width: 767px) {
+  .skills-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .skills-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .skills-list p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 /* =============== CONSISTENCY IN PADDING FOR ALL SECTIONS =============== */
 .work-experience-section,
 .projects-section,
 .contact-section {
-  padding: 30px 20px;
+  padding: 70px 20px 20px;
 }
 
 .projects-section {
@@ -377,7 +476,7 @@ body.scroll-active ::-webkit-scrollbar {
 /* Work Experience Styles */
 .work-experience-section {
   background-color: var(--section-background-color);
-  padding: 70px 20px;
+  padding: 70px 20px 20px;
   /* color: var(--text-color); */
   color: whitesmoke;
   text-align: center;
@@ -691,6 +790,7 @@ body.scroll-active ::-webkit-scrollbar {
   font-size: 1.2em;
   text-align: left;
   line-height: 1.8;
+  color: white !important;
 }
 
 .tech-icons {
