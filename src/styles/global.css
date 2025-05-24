@@ -1,3 +1,15 @@
+/* =================== GLOBAL VARIABLES =================== */
+/* =================== PRELOADER =================== */
+/* =================== SCROLLBAR =================== */
+/* =================== NAVBAR =================== */
+/* =================== INTRODUCTION =================== */
+/* =================== ABOUT =================== */
+/* =================== SKILLS =================== */
+/* =================== WORK EXPERIENCE =================== */
+/* =================== PROJECTS =================== */
+/* =================== CONTACT =================== */
+/* =================== FOOTER =================== */
+
 html {
   --section-background-color: linear-gradient(
     to bottom left,
@@ -13,7 +25,8 @@ html {
 
   --imp-text-color: #fcc200;
 
-  /* scroll-padding-top: 20px; Adjust based on your navbar height */
+  scroll-padding-top: 20px;
+  /* Adjust based on your navbar height */
 }
 
 .purple {
@@ -771,12 +784,12 @@ body.scroll-active ::-webkit-scrollbar {
 }
 
 /* About */
-.about-section {
+/* .about-section {
   position: relative !important;
   padding-top: 70px !important;
   padding-bottom: 20px !important;
   color: white !important;
-}
+} */
 
 .about-content {
   display: flex;
