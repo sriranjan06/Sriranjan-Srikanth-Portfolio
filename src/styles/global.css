@@ -1,15 +1,4 @@
 /* =================== GLOBAL VARIABLES =================== */
-/* =================== PRELOADER =================== */
-/* =================== SCROLLBAR =================== */
-/* =================== NAVBAR =================== */
-/* =================== INTRODUCTION =================== */
-/* =================== ABOUT =================== */
-/* =================== SKILLS =================== */
-/* =================== WORK EXPERIENCE =================== */
-/* =================== PROJECTS =================== */
-/* =================== CONTACT =================== */
-/* =================== FOOTER =================== */
-
 html {
   --section-background-color: linear-gradient(
     to bottom left,
@@ -26,9 +15,9 @@ html {
   --imp-text-color: #fcc200;
 
   scroll-padding-top: 20px;
-  /* Adjust based on your navbar height */
 }
 
+/* =================== BASE ELEMENTS =================== */
 .purple {
   color: var(--imp-text-color) !important;
 }
@@ -37,13 +26,6 @@ button:focus {
   box-shadow: none !important;
 }
 
-/* a {
-  position: relative !important;
-  z-index: 9999 !important;
-  display: inline-block !important;
-  pointer-events: auto !important;
-} */
-
 a:not(.home-social-icons) {
   position: relative !important;
   z-index: 9999 !important;
@@ -51,7 +33,12 @@ a:not(.home-social-icons) {
   pointer-events: auto !important;
 }
 
-/*  Preloader */
+body:hover ::-webkit-scrollbar,
+body.scroll-active ::-webkit-scrollbar {
+  opacity: 1;
+}
+
+/* =================== PRELOADER =================== */
 #preloader {
   position: fixed;
   top: 0;
@@ -64,7 +51,6 @@ a:not(.home-social-icons) {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100px 100px;
-  /* display: none !important; */
 }
 
 #preloader-none {
@@ -76,60 +62,47 @@ a:not(.home-social-icons) {
   height: 100vh;
 }
 
-/* Scrollbar */
+/* =================== SCROLLBAR =================== */
 ::-webkit-scrollbar {
   width: 7px;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Smooth fade-in/out */
+  transition: opacity 0.3s ease-in-out;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  /* background: #2d1950; */
   background: black;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(3, 65, 115, 0.85);
   border-radius: 12px;
   transition: background 0.3s ease-in-out;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(2, 76, 137);
 }
 
-/* Visible Scrollbar on Hover or Scroll */
-body:hover ::-webkit-scrollbar,
-body.scroll-active ::-webkit-scrollbar {
-  opacity: 1;
-}
-
-/* Navbar Section */
+/* =================== NAVBAR =================== */
+/* Sticky style when scrolling */
 .sticky {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.75
-  ) !important; /* Black with reduced opacity */
+  background-color: rgba(0, 0, 0, 0.75) !important;
   transition: all 0.3s ease-out !important;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow */
-  backdrop-filter: blur(10px) !important; /* Adds a blur effect */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
 }
 
+/* Base navbar style */
 .navbar {
   position: fixed !important;
-  background-color: rgba(0, 0, 0, 0.75) !important; /* Semi-transparent black */
-  padding: 0.5rem 1.5rem !important; /* Reduced padding */
-  font-size: 1.1rem !important; /* Slightly smaller font size */
-  z-index: 1000 !important; /* Ensure it stays above all other content */
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  padding: 0.5rem 1.5rem !important;
+  font-size: 1.1rem !important;
+  z-index: 1000 !important;
   transition: all 0.3s ease-out !important;
 }
 
-/* Hamburger Menu */
+/* Hamburger toggler */
 .navbar-toggler {
   position: relative;
   background-color: transparent !important;
@@ -138,17 +111,17 @@ body.scroll-active ::-webkit-scrollbar {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: white !important; /* Ensure it is visible */
-  height: 3px !important; /* Thickness of the bars */
-  width: 25px !important; /* Length of the bars */
-  margin: 5px 0 !important; /* Spacing between the bars */
-  transition: all 0.3s ease-in-out !important; /* Smooth animations */
+  background-color: white !important;
+  height: 3px !important;
+  width: 25px !important;
+  margin: 5px 0 !important;
+  transition: all 0.3s ease-in-out !important;
 }
 
-/* Navbar Brand */
+/* Brand name */
 .navbar-brand {
   color: white !important;
-  font-size: 1.2rem !important; /* Slightly smaller branding text */
+  font-size: 1.2rem !important;
   font-weight: 500 !important;
   margin-right: 1rem;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -157,28 +130,19 @@ body.scroll-active ::-webkit-scrollbar {
 .navbar-brand:hover {
   transform: scale(1.1);
   color: var(--imp-text-color) !important;
-  /* Accent color */
-  /* color: whitesmoke !important; */
   font-weight: 600;
 }
 
-/* Navbar Items */
+/* Navbar links */
 .navbar-nav .nav-link {
-  color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ) !important; /* Light, semi-transparent white */
-  padding: 0.5rem 0.8rem !important; /* Reduced padding */
-  margin: 0 10px !important; /* Spacing between nav items */
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 0.5rem 0.8rem !important;
+  margin: 0 10px !important;
   position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  /* color: var(--imp-text-color) !important;  */
-  /* Accent color */
   color: whitesmoke !important;
 }
 
@@ -189,15 +153,15 @@ body.scroll-active ::-webkit-scrollbar {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--imp-text-color); /* Accent color for underline */
+  background-color: var(--imp-text-color);
   transition: width 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover::after {
-  width: 100%; /* Expands underline on hover */
+  width: 100%;
 }
 
-/* Mobile Responsive Navbar Adjustments */
+/* =================== NAVBAR - RESPONSIVE =================== */
 @media (max-width: 767px) {
   .navbar {
     padding: 0.8rem 1.2rem !important;
@@ -207,6 +171,13 @@ body.scroll-active ::-webkit-scrollbar {
     padding: 0.7rem 1rem !important;
   }
 }
+/* =================== INTRODUCTION =================== */
+/* =================== ABOUT =================== */
+/* =================== SKILLS =================== */
+/* =================== WORK EXPERIENCE =================== */
+/* =================== PROJECTS =================== */
+/* =================== CONTACT =================== */
+/* =================== FOOTER =================== */
 
 /* General Section Styling */
 .section-header {
