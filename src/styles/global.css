@@ -334,78 +334,50 @@ body.scroll-active ::-webkit-scrollbar {
 }
 
 /* =================== ABOUT =================== */
-/* =================== SKILLS =================== */
-/* =================== WORK EXPERIENCE =================== */
-/* =================== PROJECTS =================== */
-/* =================== CONTACT =================== */
-/* =================== FOOTER =================== */
-
-/* General Section Styling */
-.section-header {
-  font-size: 2.6em;
-  margin-bottom: 20px;
-  text-align: center;
-  color: white !important; /* <- Add this line */
-}
-
-/* =============== RESPONSIVE DESIGN (MOBILE OPTIMIZATION) =============== */
-@media (max-width: 767px) {
-  .intro-section {
-    flex-direction: column;
-    height: auto; /* Allow content to determine height */
-    padding: 50px 15px; /* Adjusted padding for mobile */
-  }
-
-  .intro-content {
-    padding: 30px 0;
-    text-align: center; /* Center content on mobile */
-  }
-
-  .intro-header {
-    padding-top: 20px !important;
-    text-align: center !important; /* Center-align text */
-  }
-
-  .heading {
-    font-size: 1.2em; /* Reduce heading size */
-  }
-
-  .heading-name {
-    font-size: 2em; /* Adjust main name size */
-  }
-
-  .intro-subtext {
-    font-size: 1rem; /* Slightly smaller text */
-  }
-
-  .profile-picture-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .profile-picture {
-    max-height: 200px; /* Reduce size */
-    width: 200px; /* Ensure width and height are equal */
-  }
-
-  .typewriter-container {
-    padding-top: 10px;
-    text-align: center;
-  }
-
-  .Typewriter__wrapper {
-    font-size: 1.5em !important;
-  }
-
-  .Typewriter__cursor {
-    font-size: 1.7em !important;
-  }
-}
-
-/* =============== ABOUT ME & TECHNICAL SKILLS =============== */
 .about-section {
+  position: relative !important;
   background-color: var(--section-background-color);
-  padding: 70px 20px 20px; /* Reduced top padding */
+  padding: 70px 20px 20px !important; /* Reduced top padding */
+  color: whitesmoke !important;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the grid */
+  gap: 30px; /* Spacing between columns */
+  margin-bottom: 50px;
+}
+
+.about-text {
+  font-size: 1.2em;
+  text-align: left;
+  line-height: 1.8;
+  color: white !important;
+}
+
+.about-activity {
+  list-style: none !important;
+  text-align: left !important;
+  padding-left: 1px !important;
+}
+
+.quote-card-view {
+  border: none !important;
+  color: white !important;
+  background-color: transparent !important;
+}
+
+@media (max-width: 767px) {
+  .about-img {
+    padding-top: 0 !important;
+  }
+}
+
+/* =================== SKILLS =================== */
+.skills-section {
+  background-color: var(--section-background-color);
+  padding: 70px 20px 20px;
   color: whitesmoke;
 }
 
@@ -417,12 +389,6 @@ body.scroll-active ::-webkit-scrollbar {
   font-size: 1.2em;
   margin-bottom: 10px;
   color: white !important;
-}
-
-.skills-section {
-  background-color: var(--section-background-color);
-  padding: 70px 20px 20px; /* Top | Left/Right | Bottom */
-  color: whitesmoke;
 }
 
 @media (max-width: 767px) {
@@ -442,30 +408,12 @@ body.scroll-active ::-webkit-scrollbar {
   }
 }
 
-/* =============== CONSISTENCY IN PADDING FOR ALL SECTIONS =============== */
-.work-experience-section,
-.projects-section,
-.contact-section {
-  padding: 70px 20px 20px;
-}
-
-.projects-section {
-  position: relative;
-  z-index: 0;
-}
-
-/* Work Experience Styles */
+/* =================== WORK EXPERIENCE =================== */
 .work-experience-section {
   background-color: var(--section-background-color);
   padding: 70px 20px 20px;
-  /* color: var(--text-color); */
   color: whitesmoke;
   text-align: center;
-}
-
-.section-header {
-  font-size: 2.6em;
-  margin-bottom: 20px;
 }
 
 .timeline {
@@ -540,7 +488,16 @@ body.scroll-active ::-webkit-scrollbar {
   }
 }
 
-/* Projects */
+/* =================== PROJECTS =================== */
+.projects-section {
+  position: relative;
+  z-index: 0;
+  background-color: var(--section-background-color);
+  padding: 70px 20px 20px;
+  color: whitesmoke;
+  text-align: center;
+}
+
 .project-card-inner {
   position: relative;
   overflow: hidden;
@@ -604,7 +561,7 @@ body.scroll-active ::-webkit-scrollbar {
 }
 
 .project-row {
-  margin-bottom: 30px; /* Adds padding between the two rows */
+  margin-bottom: 30px;
 }
 
 .more-links {
@@ -617,10 +574,9 @@ body.scroll-active ::-webkit-scrollbar {
 
 .github-link,
 .resume-link {
-  /* text-decoration: none !important; */
-  text-decoration: underline !important; /* Default underline */
-  text-decoration-color: #fcc200 !important; /* White underline */
-  text-underline-offset: 4px; /* Moves underline slightly below text */
+  text-decoration: underline !important;
+  text-decoration-color: #fcc200 !important;
+  text-underline-offset: 4px;
   color: var(--imp-text-color) !important;
   font-weight: bold !important;
   font-size: 1.2rem !important;
@@ -631,7 +587,15 @@ body.scroll-active ::-webkit-scrollbar {
 .resume-link:hover {
   color: white !important;
   transform: scale(1.05) !important;
-  text-decoration: none !important; /* Removes underline on hover */
+  text-decoration: none !important;
+}
+
+/* =================== CONTACT =================== */
+/* =================== FOOTER =================== */
+
+.section-header {
+  font-size: 2.6em;
+  margin-bottom: 20px;
 }
 
 /* Contact Me section */
@@ -751,29 +715,6 @@ body.scroll-active ::-webkit-scrollbar {
   color: #700c86 !important;
 }
 
-/* About */
-/* .about-section {
-  position: relative !important;
-  padding-top: 70px !important;
-  padding-bottom: 20px !important;
-  color: white !important;
-} */
-
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Ensures the grid is centered */
-  gap: 30px; /* Ensures proper spacing between the boxes */
-  margin-bottom: 50px;
-}
-
-.about-text {
-  font-size: 1.2em;
-  text-align: left;
-  line-height: 1.8;
-  color: white !important;
-}
-
 .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;
@@ -803,24 +744,6 @@ body.scroll-active ::-webkit-scrollbar {
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
-}
-
-.quote-card-view {
-  border: none !important;
-  color: white !important;
-  background-color: transparent !important;
-}
-
-.about-activity {
-  list-style: none !important;
-  text-align: left !important;
-  padding-left: 1px !important;
-}
-
-@media (max-width: 767px) {
-  .about-img {
-    padding-top: 0 !important;
-  }
 }
 
 /* --------- */
