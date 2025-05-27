@@ -22,6 +22,11 @@ html {
   color: var(--imp-text-color) !important;
 }
 
+.section-header {
+  font-size: 2.6em;
+  margin-bottom: 20px;
+}
+
 button:focus {
   box-shadow: none !important;
 }
@@ -591,14 +596,6 @@ body.scroll-active ::-webkit-scrollbar {
 }
 
 /* =================== CONTACT =================== */
-/* =================== FOOTER =================== */
-
-.section-header {
-  font-size: 2.6em;
-  margin-bottom: 20px;
-}
-
-/* Contact Me section */
 .contact-section {
   padding: 70px 20px;
   background-color: var(--section-background-color);
@@ -606,22 +603,11 @@ body.scroll-active ::-webkit-scrollbar {
   text-align: center;
 }
 
-.contact-header h1 {
-  font-size: 2.6em;
-  color: white;
-  margin-bottom: 20px;
-}
-
 .contact-header p {
   font-size: 1.2em;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 40px;
-}
-
-.contact-details h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: var(--imp-text-color);
+  color: whitesmoke !important;
 }
 
 .contact-link {
@@ -634,6 +620,7 @@ body.scroll-active ::-webkit-scrollbar {
   color: var(--imp-text-color);
 }
 
+/* Social Icon List */
 .social-links {
   list-style: none;
   padding: 0;
@@ -643,16 +630,7 @@ body.scroll-active ::-webkit-scrollbar {
   gap: 15px;
 }
 
-.social-icon a {
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.8);
-  transition: color 0.3s ease;
-}
-
-.social-icon a:hover {
-  color: var(--imp-text-color);
-}
-
+/* Home Footer Contact Icons */
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
@@ -715,46 +693,14 @@ body.scroll-active ::-webkit-scrollbar {
   color: #700c86 !important;
 }
 
-.tech-icons {
-  font-size: 4.5em !important;
-  margin: 15px !important;
-  padding: 10px !important;
-  opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-  border-radius: 5px !important;
-  display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
-  overflow: hidden !important;
-  transition: all 0.4s ease 0s !important;
-}
-
-@media (max-width: 767px) {
-  .tech-icons {
-    margin: 10px !important;
-  }
-}
-
-.tech-icons:hover {
-  transform: scale(1.05) !important;
-  overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
-}
-.tech-icon-images {
-  padding: 20px !important;
-  line-height: 1.6 !important;
-}
-
-/* --------- */
-/* Footer */
-/* --------- */
+/* =================== FOOTER =================== */
 .footer {
   background-color: black;
-  bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
+  bottom: 0 !important;
 }
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -762,16 +708,6 @@ body.scroll-active ::-webkit-scrollbar {
 .footer-body {
   z-index: 1;
   text-align: center !important;
-}
-
-@media (max-width: 767px) {
-  .footer-copywright {
-    text-align: center !important;
-  }
-
-  .footer-body {
-    text-align: center !important;
-  }
 }
 
 .footer h3 {
@@ -784,3 +720,15 @@ body.scroll-active ::-webkit-scrollbar {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .footer-copywright {
+    text-align: center !important;
+  }
+
+  .footer-body {
+    text-align: center !important;
+  }
+}
+/* ========================================================= */

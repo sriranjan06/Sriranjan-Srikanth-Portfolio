@@ -10,10 +10,10 @@ const ContactMe = () => {
         {/* Header */}
         <Row>
           <Col md={12} className="contact-header">
-            <h1>
+            <h1 className="section-header">
               <span className="purple">CONTACT</span> ME
             </h1>
-            <p style={{ color: "whitesmoke" }}>
+            <p>
               I'm currently open for exciting opportunities! Let’s{" "}
               <span className="purple">connect</span> and talk about the next
               big thing!

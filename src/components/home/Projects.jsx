@@ -6,9 +6,9 @@ function Projects() {
   return (
     <section id="projects" className="projects-section">
       <Container>
-        <h2 className="section-header">
+        <h1 className="section-header">
           <span className="purple">PROJECTS</span>
-        </h2>
+        </h1>
         <Row className="project-row">
           {/* Row 1 */}
           {projects.slice(0, 4).map((project, index) => (
