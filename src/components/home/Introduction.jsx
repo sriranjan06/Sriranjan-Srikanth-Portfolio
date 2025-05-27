@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Type from "../animations/Typewriter";
-import profilePic from "../../../src/assets/images/profilepicture.jpeg";
+import profilePic from "../../Assets/images/profilepicture.jpeg";
 
 function Introduction() {
   return (

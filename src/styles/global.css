@@ -52,7 +52,7 @@ body.scroll-active ::-webkit-scrollbar {
   height: 100%;
   z-index: 999999;
   background-color: black;
-  background-image: url(../assets/svg/bouncing-circles.svg);
+  background-image: url(../Assets/svg/bouncing-circles.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100px 100px;
