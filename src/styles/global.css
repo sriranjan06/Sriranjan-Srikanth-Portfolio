@@ -342,7 +342,7 @@ body.scroll-active ::-webkit-scrollbar {
 .about-section {
   position: relative !important;
   background-color: var(--section-background-color);
-  padding: 70px 20px 20px !important; /* Reduced top padding */
+  padding: 70px 20px 20px !important;
   color: whitesmoke !important;
 }
 
@@ -630,7 +630,6 @@ body.scroll-active ::-webkit-scrollbar {
   gap: 15px;
 }
 
-/* Home Footer Contact Icons */
 .home-about-social {
   text-align: center !important;
   padding-top: 25px;
@@ -753,7 +752,6 @@ body.scroll-active ::-webkit-scrollbar {
   color: #a588c0 !important;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 767px) {
   .footer-copywright {
     text-align: center !important;
