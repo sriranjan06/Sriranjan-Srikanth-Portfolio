@@ -717,6 +717,38 @@ body.scroll-active ::-webkit-scrollbar {
   margin-bottom: 0.5em !important;
 }
 
+.footer-link {
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease, font-weight 0.3s ease;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease;
+}
+
+.footer-link:hover .footer-text {
+  font-weight: 600;
+  transform: scale(1.03);
+}
+
+.footer-arrow {
+  transition: transform 0.3s ease;
+}
+
+.footer-link:hover .footer-arrow {
+  transform: scale(1.2);
+  stroke: #fcc200;
+}
+
 .blockquote-footer {
   color: #a588c0 !important;
 }
